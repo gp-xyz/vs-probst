@@ -24,16 +24,19 @@ function Home() {
       
       <div className='sofaheader'> Welcome to Tribal Couch aka Sofa Survivor 2023. </div>
 
-      <div className='p-3'>Who will win Survivor 44? (first episode debuts March1)</div>
 
-      <li className='lilbubble'>Instructions
-        <ul>*Choose a name, a energy (for fun), and your 3 favorite contestants on the TV show. This is your Sofa Tribe.</ul>
-        <ul>*Entry fee is $100. All entry fees will be awarded to the winning tribe. If multiple tribes pick the winner, the prize pool is divided proportionally. Payment must be made outside of this website somehow.</ul>
-        <ul>*The deadline to submit entries is when episode #2 of the show is aired, the evening of March 8.</ul>
-        <ul>*If you need to modify your entry before the deadline, just make a new tribe. I will manually delete 'unwanted' tribes based on which entries are paid for.</ul>
-      </li>
 
-      <Link to='/new' className='bg-blue-500 w-full drop-shadow-lg hover:bg-blue-600' >SELECT YOUR TEAM &rarr;&rarr;</Link>
+      <div className='lilbubble pl-6 ml-6'>
+      <div className='pb-5'>Who will win Survivor 44? (first episode debuts <span className='text-slate-600'>March 1</span>)</div>
+      <div className='font-semibold'>Instructions</div>
+        <div className='pl-2 pb-2'>*Choose a name, a energy (for fun), and your 3 favorite contestants on the TV show. This is your Tribe.</div>
+        <div className='pl-2 pb-2'>*Entry fee is $100. All entry fees will be awarded to the winning tribe. If multiple tribes pick the winner, the prize pool is divided proportionally. Payment must be made outside of this website somehow.</div>
+        <div className='pl-2 pb-2'>*The deadline to submit entries is when episode #2 of the show is aired, the evening of <span className='text-slate-600'>March 8</span>.</div>
+        <div className='pl-2 pb-2'>*If you need to modify your entry before the deadline, just make a new tribe. I will manually delete 'unwanted' tribes based on which entries are paid for.</div>
+      </div>
+
+      <div className='pl-3 w-full'><Link to='/new' className='bg-blue-500 p-4 w-full drop-shadow-lg hover:bg-blue-600' >SELECT YOUR TEAM &rarr;&rarr;</Link>
+      </div>
     </div>
   );
 }

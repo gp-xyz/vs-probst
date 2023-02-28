@@ -4,7 +4,7 @@
 
 body {
   @apply font-sans text-2xl antialiased text-pink-200;
-  background-image: url('./tree.jpg');
+  background-image: url('./tropics.jpg');
   background-size: cover;
   background-position: top center;
 }
@@ -23,7 +23,7 @@ body {
 }
 
 .nav-link {
-  @apply  text-cyan-500 block py-2 px-4 text-center transition-colors duration-200 bg-pink-300 bg-opacity-10;
+  @apply  text-green-100 block py-2 px-4 text-center transition-colors duration-200 bg-yellow-300 bg-opacity-70;
 }
 
 .nav-link:hover {
@@ -33,7 +33,7 @@ body {
   @apply border text-black border-gray-400 rounded-md px-3 py-2 focus:outline-none focus:border-blue-500;
 }
 .sofaheader{
-  @apply text-5xl font-semibold p-5;
+  @apply text-5xl font-semibold p-5 text-slate-50;
 }
 
 

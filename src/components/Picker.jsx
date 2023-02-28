@@ -4,13 +4,20 @@ function Picker(props) {
   const [picks, setPicks] = useState([]);
 
   function handlePick(contestant) {
-    const newPicks = [...picks, contestant];
+    const index = picks.findIndex(p => p.id === contestant.id);
+    let newPicks;
+    if (index === -1) {
+      newPicks = [...picks, contestant];
+    } else {
+      newPicks = picks.filter(p => p.id !== contestant.id);
+    }
     if (newPicks.length > 3) {
       newPicks.shift();
     }
     setPicks(newPicks);
     props.OnPick(newPicks);
   }
+  
 
   return (
     <div className='lilbubble'>

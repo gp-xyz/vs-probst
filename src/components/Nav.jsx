@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav className="flex justify-center">
-      <div className='grid grid-cols-1 md:grid-cols-4 w-full max-w-screen-lg'>
+      <div className='grid grid-cols-1 md:grid-cols-4 w-full max-w-screen-xl'>
         <Link to='/' className="nav-link">Home</Link>
         <Link to='/new' className="nav-link">NEW TRIBE</Link>
         <Link to='/tribes' className="nav-link">Tribes</Link>

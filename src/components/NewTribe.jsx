@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Picker from './Picker';
-
+import { Link } from 'react-router-dom';
 function NewTribe() {
   const [contestants, setContestants] = useState([]);
   const [selectedContestant, setSelectedContestant] = useState(null);
@@ -87,7 +87,7 @@ function NewTribe() {
             
           </div>
           <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
-            Submit
+          <Link to='/tribes'>Submit</Link>
           </button>
 
         </div>

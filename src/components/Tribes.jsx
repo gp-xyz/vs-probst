@@ -16,9 +16,22 @@ function Tribes() {
       <ul>
         {tribes.map((tribe, index) => (
           <li key={index} className='lilbubble'>
-            <strong>{tribe.tribename}</strong> - {tribe.catchphrase}<br />
-            Picks: {tribe.pick1}, {tribe.pick2}, {tribe.pick3}<br />
-            Remains: {tribe.remains}
+            <div className='grid grid-cols-2'>
+
+              <div>
+                <strong>{tribe.tribename}</strong> - {tribe.catchphrase}<br />
+                [{tribe.pick1}, {tribe.pick2}, {tribe.pick3}] <br />
+                
+              </div>
+
+              <div className='grid grid-cols-3'>
+              <img src={'images/'+tribe.pick1 + '.jpg'} />
+              <img src={'images/'+tribe.pick2 + '.jpg'} />
+              <img src={'images/'+tribe.pick3 + '.jpg'} />
+                
+                
+              </div>
+            </div>
           </li>
         ))}
       </ul>

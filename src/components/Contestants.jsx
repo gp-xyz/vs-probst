@@ -13,14 +13,15 @@ function Contestants() {
   return (
     <div className='bubblebox'>
       <h2>Contestants:</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
         {stats.map((person, index) => (
           <div key={index} className='lilbubble'>
+            <img className='w-full h-auto' src={'/images/'+person.name + '.jpg'} /> 
             <div className='grid grid-cols-1'>
               <div className='font-bold'>{person.name}: {person.count} selection</div>
               
             </div>
-            <img className='w-1/2 h-auto' src={'/images/'+person.name + '.jpg'} /> 
+            
           </div>
         ))}
       </div>

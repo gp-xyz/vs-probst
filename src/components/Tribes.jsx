@@ -24,7 +24,7 @@ function Tribes() {
                 
               </div>
 
-              <div className='grid grid-cols-3'>
+              <div className='grid grid-cols-3 border-yellow-300 border-4 p-1'>
               <img src={'images/'+tribe.pick1 + '.jpg'} />
               <img src={'images/'+tribe.pick2 + '.jpg'} />
               <img src={'images/'+tribe.pick3 + '.jpg'} />

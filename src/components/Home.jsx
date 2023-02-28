@@ -24,10 +24,10 @@ function Home() {
       
       <div className='sofaheader'> Welcome to Tribal Couch aka Sofa Survivor 2023. </div>
 
-      <div className='p-3'>Who will win Survivor 44? (first episode debuts March1).</div>
+      <div className='p-3'>Who will win Survivor 44? (first episode debuts March1)</div>
 
-      <li>
-        <ul>*Choose a name, a catchphrase, and your 3 favorite contestants on the TV show. This is your Sofa Tribe.</ul>
+      <li className='lilbubble'>Instructions
+        <ul>*Choose a name, a energy (for fun), and your 3 favorite contestants on the TV show. This is your Sofa Tribe.</ul>
         <ul>*Entry fee is $100. All entry fees will be awarded to the winning tribe. If multiple tribes pick the winner, the prize pool is divided proportionally. Payment must be made outside of this website somehow.</ul>
         <ul>*The deadline to submit entries is when episode #2 of the show is aired, the evening of March 8.</ul>
         <ul>*If you need to modify your entry before the deadline, just make a new tribe. I will manually delete 'unwanted' tribes based on which entries are paid for.</ul>

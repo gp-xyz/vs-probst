@@ -39,7 +39,7 @@ body {
 
 
 .pickreg {
-  @apply border-2 border-gray-300 rounded-lg bg-purple-700 bg-opacity-20 hover:bg-opacity-70 hover:cursor-pointer;
+  @apply border-2 border-gray-300 rounded-lg bg-purple-700 bg-opacity-20 hover:drop-shadow-lg hover:cursor-pointer;
 }
 
 .picked{

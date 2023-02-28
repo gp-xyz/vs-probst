@@ -14,13 +14,14 @@ function Home() {
   return (
     <div>
       
-      <ul>
+      {/* <ul>
         {messages.map(message => (
           <li key={message.id}>
             <div className='bubblebox'>({message.date}): {message.message}  </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
+      Welcome to Tribal Couch aka Sofa Survivor 2023. 
     </div>
   );
 }

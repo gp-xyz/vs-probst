@@ -15,10 +15,10 @@ function Tribes() {
       <h2>Tribes:</h2>
       <ul>
         {tribes.map((tribe, index) => (
-          <li key={index} className='lilbubble'>
-            <div className='grid grid-cols-2'>
+          <li key={index} className='lilbubble max-w-50 max-h-50  '>
+            <div className='grid grid-cols-1 md:grid-cols-2 inline-block align-middle'>
 
-              <div>
+              <div className=''>
                 <strong>{tribe.tribename}</strong> - {tribe.catchphrase}<br />
                 [{tribe.pick1}, {tribe.pick2}, {tribe.pick3}] <br />
                 

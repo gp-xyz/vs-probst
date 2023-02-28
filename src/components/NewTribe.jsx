@@ -3,22 +3,15 @@ import Picker from './Picker';
 import { Link } from 'react-router-dom';
 function NewTribe() {
   const [contestants, setContestants] = useState([]);
-  const [selectedContestant, setSelectedContestant] = useState(null);
   const [tribeName, setTribeName] = useState('');
   const [energy, setEnergy] = useState('');
   const [picked, setPicked] = useState([]);
-
   useEffect(() => {
     fetch('https://probst-disco.pythonanywhere.com/contestants')
       .then(response => response.json())
       .then(data => setContestants(data));
   }, []);
 
-  function handleContestantChange(event) {
-    const contestantId = event.target.value;
-    const contestant = contestants.find(c => c.id === parseInt(contestantId));
-    setSelectedContestant(contestant);
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -51,7 +44,6 @@ function NewTribe() {
     <div className='bubblebox'>
       <h1 className='sofaheader'>Create New Tribe</h1>
 
-      <form onSubmit={handleSubmit}>
         <div className="lilbubble flex flex-col sm:flex-row sm:items-center">
           <div className="mb-2 sm:mr-4">
             <label htmlFor="tribe-name">Tribe Name:</label>
@@ -59,7 +51,7 @@ function NewTribe() {
               id="tribe-name"
               type="text"
               value={tribeName}
-              placeholder="default"
+              placeholder="name your tribe"
               className="w-full sm:w-auto sofatext"
               onChange={(event) => setTribeName(event.target.value)}
             />
@@ -70,7 +62,7 @@ function NewTribe() {
               id="energy"
               type="text"
               value={energy}
-              placeholder="default"
+              placeholder="your energy (optional)"
               className="w-full sm:w-auto sofatext"
               onChange={(event) => setEnergy(event.target.value)}
             />
@@ -86,12 +78,11 @@ function NewTribe() {
             <span>Picked Contestants: {getNames()} </span>
             
           </div>
-          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
-          <Link to='/tribes'>Submit</Link>
+         <button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
+         <Link to='/tribes/'>Submit</Link>
           </button>
 
         </div>
-      </form>
     </div>
   );
 }

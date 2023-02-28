@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Picker from './Picker';
+import { Link } from 'react-router-dom';
 
 function NewTribe() {
   const [contestants, setContestants] = useState([]);
@@ -59,7 +60,7 @@ function NewTribe() {
               id="tribe-name"
               type="text"
               value={tribeName}
-              placeholder="default"
+              placeholder="name of your tribe"
               className="w-full sm:w-auto sofatext"
               onChange={(event) => setTribeName(event.target.value)}
             />
@@ -70,7 +71,7 @@ function NewTribe() {
               id="energy"
               type="text"
               value={energy}
-              placeholder="default"
+              placeholder="(anything,optional)"
               className="w-full sm:w-auto sofatext"
               onChange={(event) => setEnergy(event.target.value)}
             />
@@ -86,9 +87,9 @@ function NewTribe() {
             <span>Picked Contestants: {getNames()} </span>
             
           </div>
-          <button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
+          <Link to='/tribes'><button type="submit" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-md">
             Submit
-          </button>
+          </button></Link>
 
         </div>
       </form>

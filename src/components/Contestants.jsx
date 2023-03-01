@@ -12,7 +12,7 @@ function Contestants() {
 
   return (
     <div className='bubblebox'>
-      <h2 className='sofaheader'>Contestants:</h2>
+      <h2 className=''>Contestants:</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-1">
         {stats.map((person, index) => (
           <div key={index} className='lilbubble'>
